@@ -1,12 +1,9 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>VEYORA — Fashion & Winter Store</title><link rel="stylesheet" href="style.css"></head><body>
-<header><b>VEYORA</b><div><button id="search">⌕</button><button id="cart">🛒 <span id="count">0</span></button></div></header>
-<section class="hero"><p>NEW SEASON • 2026</p><h1>Wear your<br><em>confidence.</em></h1><small>Premium fashion and winter essentials for everyday style.</small><br><a href="#shop">SHOP COLLECTION</a></section>
-<nav id="cats"><button class="active" data-c="All">All</button><button data-c="Men">Men</button><button data-c="Women">Women</button><button data-c="Winter">Winter</button><button data-c="New">New arrivals</button></nav>
-<main id="shop"><div class="head"><div><p>CURATED FOR YOU</p><h2>Shop products</h2></div><select id="sort"><option value="f">Featured</option><option value="l">Price low-high</option><option value="h">Price high-low</option></select></div><div id="grid"></div></main>
-<section class="news"><p>STAY IN THE LOOP</p><h2>New drops. Better style.</h2><form id="form"><input type="email" placeholder="Your email" required><button>Subscribe</button></form></section>
-<footer><b>VEYORA</b><p>Fashion • Winter • Everyday essentials</p><small>© 2026 VEYORA</small></footer>
-<aside id="drawer"><div class="dh"><h2>Your cart</h2><button id="close">×</button></div><div id="items"></div><h3>Total: <span id="total">Rs 0</span></h3><button class="checkout" id="checkout">Checkout — Cash on Delivery</button></aside>
-<div id="shade"></div><div id="modal"><div class="box"><button id="x">×</button><div id="mc"></div></div></div>
-<script src="script.js"></script></body></html>
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VEYORA | Fashion Store</title><link rel="stylesheet" href="style.css"></head><body>
+<header><a class="logo" href="#">VEYORA</a><nav><a href="#shop">Shop</a><a href="#collections">Collections</a></nav><div><button id="cartBtn">🛒 <b id="count">0</b></button></div></header>
+<section class="hero"><div><small>NEW SEASON • 2026</small><h1>Modern style.<br><i>Made for you.</i></h1><p>Discover clothing and winter essentials selected for your everyday wardrobe.</p><a class="btn" href="#shop">SHOP NOW</a></div></section>
+<section id="collections" class="collections"><h2>SHOP BY COLLECTION</h2><div class="collection-grid"><button data-cat="Men">MEN</button><button data-cat="Women">WOMEN</button><button data-cat="Winter">WINTER</button><button data-cat="New">NEW ARRIVALS</button></div></section>
+<main id="shop"><div class="bar"><div><small>CURATED COLLECTION</small><h2>Featured products</h2></div><select id="sort"><option value="featured">Featured</option><option value="low">Price low to high</option><option value="high">Price high to low</option></select></div><div id="grid"></div></main>
+<section class="offer"><small>VEYORA MEMBER</small><h2>Get 10% off your first order</h2><p>Join our list for new drops and exclusive offers.</p><form id="emailForm"><input type="email" required placeholder="Email address"><button>JOIN</button></form></section>
+<footer><strong>VEYORA</strong><p>Fashion • Winter • Everyday essentials</p><small>© 2026 VEYORA</small></footer>
+<aside id="drawer"><div class="drawerhead"><h2>Your cart</h2><button id="closeCart">×</button></div><div id="items"></div><div class="sum"><span>Total</span><b id="total">Rs 0</b></div><button id="checkout" class="dark full">CHECKOUT</button></aside><div id="shade"></div>
+<div id="modal"><div class="modalbox"><button id="closeModal">×</button><div id="modalBody"></div></div></div><script src="script.js"></script></body></html>
