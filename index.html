@@ -1,9 +1,20 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VEYORA | Fashion Store</title><link rel="stylesheet" href="style.css"></head><body>
-<header><a class="logo" href="#">VEYORA</a><nav><a href="#shop">Shop</a><a href="#collections">Collections</a></nav><div><button id="cartBtn">🛒 <b id="count">0</b></button></div></header>
-<section class="hero"><div><small>NEW SEASON • 2026</small><h1>Modern style.<br><i>Made for you.</i></h1><p>Discover clothing and winter essentials selected for your everyday wardrobe.</p><a class="btn" href="#shop">SHOP NOW</a></div></section>
-<section id="collections" class="collections"><h2>SHOP BY COLLECTION</h2><div class="collection-grid"><button data-cat="Men">MEN</button><button data-cat="Women">WOMEN</button><button data-cat="Winter">WINTER</button><button data-cat="New">NEW ARRIVALS</button></div></section>
-<main id="shop"><div class="bar"><div><small>CURATED COLLECTION</small><h2>Featured products</h2></div><select id="sort"><option value="featured">Featured</option><option value="low">Price low to high</option><option value="high">Price high to low</option></select></div><div id="grid"></div></main>
-<section class="offer"><small>VEYORA MEMBER</small><h2>Get 10% off your first order</h2><p>Join our list for new drops and exclusive offers.</p><form id="emailForm"><input type="email" required placeholder="Email address"><button>JOIN</button></form></section>
-<footer><strong>VEYORA</strong><p>Fashion • Winter • Everyday essentials</p><small>© 2026 VEYORA</small></footer>
-<aside id="drawer"><div class="drawerhead"><h2>Your cart</h2><button id="closeCart">×</button></div><div id="items"></div><div class="sum"><span>Total</span><b id="total">Rs 0</b></div><button id="checkout" class="dark full">CHECKOUT</button></aside><div id="shade"></div>
-<div id="modal"><div class="modalbox"><button id="closeModal">×</button><div id="modalBody"></div></div></div><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VEYORA Admin Dashboard</title><link rel="stylesheet" href="admin.css"></head>
+<body>
+<div id="login" class="login"><div class="loginbox"><div class="brand">VEYORA</div><h1>Admin Panel</h1><p>Manage products and orders</p><form id="loginForm"><input id="user" required placeholder="Username"><input id="pass" required type="password" placeholder="Password"><button>LOGIN</button></form><small>Demo login: admin / veyora123</small></div></div>
+<div id="app" hidden>
+<header><div class="brand">VEYORA <span>ADMIN</span></div><button id="logout">Logout</button></header>
+<nav><button data-page="dashboard" class="active">Dashboard</button><button data-page="products">Products</button><button data-page="orders">Orders</button></nav>
+<main>
+<section id="dashboard" class="page"><div class="top"><div><small>OVERVIEW</small><h1>Dashboard</h1></div><button class="primary" data-page="products">+ Add Product</button></div>
+<div class="stats"><div><small>PRODUCTS</small><strong id="statProducts">0</strong></div><div><small>ORDERS</small><strong id="statOrders">0</strong></div><div><small>REVENUE</small><strong id="statRevenue">Rs 0</strong></div><div><small>PENDING</small><strong id="statPending">0</strong></div></div>
+<div class="panel"><h2>Recent orders</h2><div id="recent"></div></div></section>
+<section id="products" class="page" hidden><div class="top"><div><small>CATALOG</small><h1>Products</h1></div><button class="primary" id="addBtn">+ Add Product</button></div><div class="panel"><div id="productList"></div></div></section>
+<section id="orders" class="page" hidden><div class="top"><div><small>SALES</small><h1>Orders</h1></div></div><div class="panel"><div id="orderList"></div></div></section>
+</main></div>
+<div id="modal" class="modal"><div class="modalbox"><button id="close" class="x">×</button><h2 id="modalTitle">Add Product</h2>
+<form id="productForm"><input type="hidden" id="pid"><label>Product name<input id="pname" required></label><div class="two"><label>Price (PKR)<input id="price" type="number" min="0" required></label><label>Stock<input id="stock" type="number" min="0" required></label></div>
+<div class="two"><label>Category<select id="category"><option>Men</option><option>Women</option><option>Winter</option><option>Accessories</option><option>New</option></select></label><label>Sizes<input id="sizes" placeholder="S, M, L, XL"></label></div>
+<label>Colors<input id="colors" placeholder="Black, Brown"></label><label>Image URL<input id="image" placeholder="https://..."></label><label>Description<textarea id="desc" rows="4"></textarea></label><button class="primary">Save Product</button></form></div></div>
+<script src="admin.js"></script></body></html>
